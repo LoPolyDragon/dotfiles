@@ -1,0 +1,156 @@
+# 🚀 Starship 配置 - Catppuccin Mocha 主题
+# ========================================
+
+# 整体配置
+format = """
+[](#cba6f7)\
+$username\
+[](bg:#fab387 fg:#cba6f7)\
+$directory\
+[](fg:#fab387 bg:#74c7ec)\
+$git_branch\
+$git_status\
+[](fg:#74c7ec bg:#94e2d5)\
+$nodejs\
+$rust\
+$golang\
+$php\
+$python\
+[](fg:#94e2d5 bg:#89b4fa)\
+$docker_context\
+[](fg:#89b4fa bg:#cdd6f4)\
+$time\
+[ ](fg:#cdd6f4)\
+$line_break$character"""
+
+# 用户名
+[username]
+show_always = true
+style_user = "bg:#cba6f7 fg:#1e1e2e"
+style_root = "bg:#cba6f7 fg:#1e1e2e"
+format = '[ $user ]($style)'
+
+# 目录
+[directory]
+style = "fg:#1e1e2e bg:#fab387"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = "󰝚 "
+"Pictures" = " "
+"Developer" = "󰲋 "
+"Projects" = "󰲋 "
+"Dev" = "󰲋 "
+
+# Git 分支
+[git_branch]
+symbol = ""
+style = "bg:#74c7ec fg:#1e1e2e"
+format = '[ $symbol $branch ]($style)'
+
+# Git 状态
+[git_status]
+style = "bg:#74c7ec fg:#1e1e2e"
+format = '[$all_status$ahead_behind ]($style)'
+
+# Node.js
+[nodejs]
+symbol = ""
+style = "bg:#94e2d5 fg:#1e1e2e"
+format = '[ $symbol ($version) ]($style)'
+
+# Rust
+[rust]
+symbol = ""
+style = "bg:#94e2d5 fg:#1e1e2e"
+format = '[ $symbol ($version) ]($style)'
+
+# Go
+[golang]
+symbol = ""
+style = "bg:#94e2d5 fg:#1e1e2e"
+format = '[ $symbol ($version) ]($style)'
+
+# PHP
+[php]
+symbol = ""
+style = "bg:#94e2d5 fg:#1e1e2e"
+format = '[ $symbol ($version) ]($style)'
+
+# Python
+[python]
+symbol = ""
+style = "bg:#94e2d5 fg:#1e1e2e"
+format = '[ $symbol ($version) ]($style)'
+
+# Docker
+[docker_context]
+symbol = ""
+style = "bg:#89b4fa fg:#1e1e2e"
+format = '[ $symbol $context ]($style)'
+
+# 时间
+[time]
+disabled = false
+time_format = "%R"
+style = "bg:#cdd6f4 fg:#1e1e2e"
+format = '[ ♥ $time ]($style)'
+
+# 换行
+[line_break]
+disabled = false
+
+# 字符
+[character]
+disabled = false
+success_symbol = '[❯](bold fg:#a6e3a1)'
+error_symbol = '[❯](bold fg:#f38ba8)'
+vimcmd_symbol = '[❮](bold fg:#a6e3a1)'
+vimcmd_replace_one_symbol = '[❮](bold fg:#f9e2af)'
+vimcmd_replace_symbol = '[❮](bold fg:#f9e2af)'
+vimcmd_visual_symbol = '[❮](bold fg:#f5c2e7)'
+
+# 其他语言支持
+[c]
+symbol = " "
+style = "bg:#94e2d5 fg:#1e1e2e"
+format = '[ $symbol ($version) ]($style)'
+
+[elixir]
+symbol = " "
+style = "bg:#94e2d5 fg:#1e1e2e"
+format = '[ $symbol ($version) ]($style)'
+
+[elm]
+symbol = " "
+style = "bg:#94e2d5 fg:#1e1e2e"
+format = '[ $symbol ($version) ]($style)'
+
+[java]
+symbol = " "
+style = "bg:#94e2d5 fg:#1e1e2e"
+format = '[ $symbol ($version) ]($style)'
+
+[julia]
+symbol = " "
+style = "bg:#94e2d5 fg:#1e1e2e"
+format = '[ $symbol ($version) ]($style)'
+
+[nim]
+symbol = "󰆥 "
+style = "bg:#94e2d5 fg:#1e1e2e"
+format = '[ $symbol ($version) ]($style)'
+
+[nix_shell]
+symbol = " "
+style = "bg:#94e2d5 fg:#1e1e2e"
+format = '[ $symbol $state( \($name\)) ]($style)'
+
+[package]
+symbol = "󰏗 "
+style = "bg:#94e2d5 fg:#1e1e2e"
+format = '[ $symbol ($version) ]($style)' 
